@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        if (taskText !== "") {
+        
             const listItem = document.createElement('li');
             listItem.textContent = taskText;
 
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             listItem.appendChild(removeButton);
             taskList.appendChild(listItem);
             taskInput.value = "";
-        }
+        
     }
 
     addButton.addEventListener('click', addTask);
