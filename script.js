@@ -11,21 +11,19 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        
-            const listItem = document.createElement('li');
-            listItem.textContent = taskText;
+        const listItem = document.createElement('li');
+        listItem.textContent = taskText;
 
-            const removeButton = document.createElement('button');
-            removeButton.textContent = "Remove";
-            removeButton.className = 'remove-btn';
-            removeButton.onclick = function() {
-                taskList.removeChild(listItem);
-            };
+        const removeButton = document.createElement('button');
+        removeButton.textContent = "Remove";
+        removeButton.className = 'remove-btn';
+        removeButton.onclick = function() {
+            taskList.removeChild(listItem);
+        };
 
-            listItem.appendChild(removeButton);
-            taskList.appendChild(listItem);
-            taskInput.value = "";
-        
+        listItem.appendChild(removeButton);
+        taskList.appendChild(listItem);
+        taskInput.value = "";
     }
 
     addButton.addEventListener('click', addTask);
